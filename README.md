@@ -9,6 +9,3 @@
 
 - GITHUBのアカウント: https://github.com/iamkots
 - 名前：Hoang Nhat Quan
-
-- GITHUBのアカウント: https://github.com/namson168
-- 名前：Bui Quoc Dat
