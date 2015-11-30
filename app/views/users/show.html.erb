@@ -44,7 +44,7 @@
  <% else %>
 <ol>
     <% @user.plans.each do |plan| %>
-    <li> プラン: <%= link_to plan.id, plan%></li>
+    <li> プラン:<%= link_to plan.id, plan%></li>
     <% end %>
 </ol>
     <%= will_paginate @user.plans.paginate(page: params[:page]) %> 
@@ -69,31 +69,34 @@
 <%= form_tag('/friends', method: :post) do %>
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
-    <%= submit_tag "リクエスト", class: "btn btn-primary" %>
+    <div class="col-md-2"><%= submit_tag "リクエスト", class: "btn btn-primary" %></div>
 <% end %>
+<div class="row"></div>
 
 <% when :requested %>
-<h4>Requested</h4>
+<!--<h4>Requested</h4>-->
 <%= form_tag "/friends/#{@friend.id}", method: :delete do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
-    <%= submit_tag "非承認", class: "btn btn-warning" %>
+    <div class="col-md-2"><%= submit_tag "非承認", class: "btn btn-warning" %></div>
 <% end %>
+<div class="row"></div>
 
 <% when :be_requested %>
-<h4>Be requested</h4>
+<!--<h4>Be requested</h4>-->
 <%= form_tag "/friends/#{@friend.id}", method: :put do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
-    <%= submit_tag "承認", class: "btn btn-info" %>    
+    <div class="col-md-2"><%= submit_tag "承認", class: "btn btn-info" %></div>
 <% end %>
+<div class="row"></div>
 
 <% when :be_accepted, :accepted %>
 <%= form_tag "/friends/#{@friend.id}", method: :delete do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
-    <%= submit_tag "フレンドを削除", class: "btn btn-danger" %>   
+    <div class="col-md-2"><%= submit_tag "フレンドを削除", class: "btn btn-danger" %>   </div>
 <% end %>
-
+<div class="row"></div>
 <% end %>
 <% end %>

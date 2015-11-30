@@ -5,7 +5,7 @@ class Word < ActiveRecord::Base
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc {|a| a[:content].blank?}
   validates :content, presence: true, uniqueness: true
-#  validate :check_correct_answer
+  validate :check_correct_answer
   
   scope :search, ->search{where "content LIKE ?", "%#{search}%"}
   scope :alphabet, ->{order "content ASC"}
