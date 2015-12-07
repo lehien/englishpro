@@ -1,16 +1,9 @@
-<header class="navbar navbar-inverse navbar-fixed-top">
+<header class="navbar  navbar-fixed-top">
   <div class="container">
-    <%= link_to "EnglishPro", root_path, id: "logo" %>
-    <form class="navbar-form pull-left" role="search">
-      <div class="input-group" id="search_bar">
-        <input type="text" class="form-control" placeholder="EnglishPro で検索" size="25">
-          <div class="input-group-btn">
-            <button type="submit" class="btn btn-default">
-            <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </div>
-      </div>
-    </form>
+    <div class="col-md-3">
+    <%= image_tag "logo.png" %>
+    </div>
+    <div class="col-md-9">
     <nav>
       <ul class="nav navbar-nav">
         <li><%= link_to "ホーム",   root_path %></li>
@@ -42,5 +35,6 @@
         <% end %>
       </ul>
     </nav>
+    </div>
   </div>
 </header>

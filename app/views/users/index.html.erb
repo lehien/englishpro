@@ -1,15 +1,28 @@
 <% provide(:title, "User List") %>
-<div>
-  <h4>All Users</h4>
 
-  <ul class="">
-    <% @users.each do |user| %>
-    <li id="user-<%= user.id %>">
-      <span class=""><%= link_to user.id, user %></span>
-      <span class=""><%= user.name %></span>
-      <span class=""><%= user.email %></span>
-    </li>
-    <% end %>
-  </ul>
+  <h3 class="center">ユーザ</h3>
+  <hr>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 center">
+  <table class="table table-strip">
+    <thead>
+      <tr class="success">
+        <th class="center">ID</th>
+        <th class="center"><%= t "名前" %></th>
+        <th class="center"><%= t "Eメール" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
   <%= will_paginate %>
+</div>
+  
 </div>

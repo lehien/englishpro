@@ -332,3 +332,16 @@ hr.redesign {
     width: 100%;
     color: black;
  }
+ 
+.navbar-fixed-top {
+  // font-size: 20px;
+  font-weight: bold;
+  background-color: #E3E3E3;
+}
+
+.navbar-fixed-top ul li a{
+    &:hover {
+    color: medium-light-blue;
+  }
+  font-size: 16px;
+}
