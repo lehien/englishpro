@@ -1,9 +1,74 @@
 
+<%= render "slider" %> 
+<div class="container">
+  
 <div class="center ">
-  <h2>Welcome to EnglishPro</h2>
+  <h2 style="color:blue">愛を分かち合う</h2>
+  <h3　style="color:blue">英語の愛を分かち合うために、学習サポートのサイトを作る</h3><br><br>
     <% if user_signed_in? %>
       <%= link_to "新計画の作成", new_plan_path, class: "btn btn-lg btn-primary" %>
     <% else %>
       <%= link_to "サインアップ!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
     <% end %>
+</div>
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome to English Pro
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> 目的 1</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>英語を興味にさせる</p>
+                        <a href="#" class="btn btn-default">もう読む</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i> 目的 2</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>単語を早く覚える</p>
+                        <a href="#" class="btn btn-default">もう読む</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i> 目的 3</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>英語の易しく気楽に学ぶ</p>
+                        <a href="#" class="btn btn-default">もう読む</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">連絡</h2>
+            </div>
+            <div class="col-md-6">
+                <p>XE チーム：</p>
+                <ul>
+                    <li><strong>HEDPSI k56</strong>
+                    </li>
+                    <li>Hanoi 工科大学</li>
+                    <li>No.1　Dai Co Viet, Hai Ba Trung Dist., Ha Noi</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="/images/coworker.jpg" alt="">
+            </div>
+        </div>        
 </div>

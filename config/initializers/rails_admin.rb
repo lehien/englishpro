@@ -32,7 +32,7 @@ RailsAdmin.config do |config|
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, User
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
-  config.main_app_name = ['EnglishPro', 'Admin']
+  config.main_app_name = ['EnglishPro', '管理']
   # or for a dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
   #  ==> Global show view settings
